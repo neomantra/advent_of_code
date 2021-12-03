@@ -12,7 +12,7 @@ local function split_string(str, sep)
 
 local function read_commands_from_stdin()
     local commands = {}
-    line_num = 0
+    local line_num = 0
     for line in io.lines() do
         line_num = line_num + 1
         local fields = split_string(line,  ' ')
@@ -26,7 +26,7 @@ local function read_commands_from_stdin()
 end
 
 
-commands = read_commands_from_stdin()
+local commands = read_commands_from_stdin()
 
 local horiz, depth = 0, 0
 
